@@ -27,7 +27,7 @@
     width: 60px;
     height: 60px;
     background: red;
-    transition: height 1s, width 1s, margin 1s;
+    transition: transform 1s;
 }
 
 .ex-6-img, .ex-7-img, .ex-8-img {
@@ -43,6 +43,10 @@
 
 .ex-10-icon {
     font-size: 60px;
+    animation-name: ex-10-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
 }
 
 .ex-11-icon {
@@ -98,14 +102,10 @@
 }
 
 .ex-5-square:hover{
-    height: 100px;
-    width: 100px;
-    margin: 0px;
+    transform: scale(1.5);
 }
 .ex-5-square:active{
-    height: 10px;
-    width: 10px;
-    margin: 40px;
+    transform: scale(0.5);
 }
 
 .ex-6-img:hover{
@@ -126,3 +126,8 @@
     filter: hue-rotate(90deg) contrast(200%);
     border-radius: 20px;
 }
+
+@keyframes ex-10-animation {
+   100% {transform: rotate(-360deg);}
+}
+
