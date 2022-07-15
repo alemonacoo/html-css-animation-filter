@@ -32,15 +32,19 @@
 
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
+    transition: filter 2s, border-radius 2s;
 }
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: filter 2s, border-radius 2s, transform 2s;
 }
+
 .ex-10-icon {
     font-size: 60px;
 }
+
 .ex-11-icon {
     font-size: 60px;
 }
@@ -102,4 +106,23 @@
     height: 10px;
     width: 10px;
     margin: 40px;
+}
+
+.ex-6-img:hover{
+    filter:grayscale(100%);
+}
+
+.ex-7-img:hover{
+    filter: blur(5px) grayscale(100%);
+}
+
+.ex-8-img:hover{
+    filter: hue-rotate(90deg) contrast(200%);
+    border-radius: 20px;
+}
+
+.ex-9-img:hover{
+    transform: scale(1.5);
+    filter: hue-rotate(90deg) contrast(200%);
+    border-radius: 20px;
 }
